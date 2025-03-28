@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 <body>
-    <h1>This is my index page</h1>
+    <form action="post">
+        {% csrf_token %}
+        <input type="text" name="city" placeholder="Enter City">
+        <input type="submit" value="Search">
+    </form>
 </body>
 </html>
