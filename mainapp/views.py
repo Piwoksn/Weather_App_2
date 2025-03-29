@@ -28,6 +28,7 @@ def home(request):
             'icon': icon,
             'temp': temp,
             'day': day,
+            'city': city
         }
     else:
         context = {'error': 'City not found. Please try again.'}
