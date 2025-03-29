@@ -6,7 +6,7 @@
     <title>Weather App</title>
 </head>
 <body>
-    <form action="post">
+    <form method="post">
         {% csrf_token %}
         <input type="text" name="city" placeholder="Enter City">
         <input type="submit" value="Search">
