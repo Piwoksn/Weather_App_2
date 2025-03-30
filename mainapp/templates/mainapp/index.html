@@ -30,7 +30,11 @@
     <div class="weather">
         <div class="left">
             <h2>{{ temp }}&#176; C</h2>
+            {% if city %}
             <h3>{{ city }}</h3>
+            {% else %}
+            <h3>"city not found!"</h3>
+            {%endif%}
         </div>
         <div class="right">
             <div class="icon">
