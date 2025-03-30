@@ -27,17 +27,15 @@
         <input type="submit" value="Search">
     </form>
 
+    {% if city %}
     <div class="weather">
         <div class="left">
             <h2>{{ temp }}&#176; C</h2>
-            {% if city %}
             <h3>{{ city }}</h3>
-            {% else %}
-            <h3>"city not found!"</h3>
-            {%endif%}
+            
         </div>
         <div class="right">
-            {% if icon %}
+            
             <div class="icon">
                 
                 <p>
@@ -47,12 +45,15 @@
                 
             </div>
 
-            {% endif %}
+            
             <div class="condition">
                 <p>{{ description }}</p>
                 <p>{{ day }}</p>
             </div>
         </div>
+        {% else %}
+        <p class="text-center text-warning">"city not found!"</p>
+        {%endif%}
     </div>
 </div>
 
