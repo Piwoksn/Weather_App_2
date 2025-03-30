@@ -37,6 +37,7 @@
             {%endif%}
         </div>
         <div class="right">
+            {% if icon %}
             <div class="icon">
                 
                 <p>
@@ -45,6 +46,8 @@
             
                 
             </div>
+
+            {% endif %}
             <div class="condition">
                 <p>{{ description }}</p>
                 <p>{{ day }}</p>

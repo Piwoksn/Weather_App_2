@@ -1,7 +1,6 @@
 from django.shortcuts import render, HttpResponse
 import requests
 import datetime
-from django.contrib import messages
 
 # Create your views here.
 def home(request):
