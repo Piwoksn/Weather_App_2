@@ -51,7 +51,9 @@
 <body>
     <div class="container">
         <h1>Weather App</h1>
-   
+    {% if message %}
+   <p class="text-danger text-center">{{ message }}</p>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         <input type="text" name="city" placeholder="Enter City">
