@@ -20,7 +20,7 @@ def home(request):
         city_url = f"https://www.googleapis.com/customsearch/v1?q={query}&cx={cse_id}&key={api_key}&start={start}&searchType={searchType}"
         city_data = requests.get(city_url).json()
         search_items = city_data.get("items")
-        image_url = search_items[1]['link']
+        image_url = search_items[0]['link']
         
         
         # weather -----
