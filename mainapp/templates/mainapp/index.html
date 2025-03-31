@@ -16,6 +16,37 @@
 
     <link rel="stylesheet" href="{% static 'style.css' %}">
     
+    <style>
+    {% if city %}
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-image: url('{{ image }}');
+            background-size: cover; /* Cover the entire screen */
+            background-position: center; /* Ensure it's centered */
+            background-repeat: no-repeat;
+            height: 100vh; /* Full height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        {% else %}
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-image: url('https://www.gotokyo.org/en/destinations/southern-tokyo/tokyo-tower-and-around/images/gotokyotabtop0326.jpg');"
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            height: 100vh; /* Full height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        {% endif %}
+    </style>
 </head>
 <body>
     <div class="container">

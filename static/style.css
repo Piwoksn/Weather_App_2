@@ -8,21 +8,6 @@
   --shadow: rgba(3, 46, 87, 0.2);
 }
 
-/* Reset the body's margin and padding */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background-image: url("https://images.pexels.com/photos/3008509/pexels-photo-3008509.jpeg?auto=compress&cs=tinysrgb&w=1600");
-  background-size: cover; /* Cover the entire screen */
-  background-position: center; /* Ensure it's centered */
-  background-repeat: no-repeat;
-  height: 100vh; /* Full height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Center the content and ensure it doesn't overflow */
 h1 {
   text-align: center;

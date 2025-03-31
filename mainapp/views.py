@@ -9,6 +9,21 @@ def home(request):
     else:
         city = "lagos"
     
+    # City url (Google search engine)
+    api_key ="AIzaSyCkgEmVtuqJ1Dqzj_qvUu5s2-DIuJOuSXY"
+    cse_id = "90ee7e8f4659d4b21"
+    query = f"{city} 1920x1080"
+    page = 1
+    start = (page-1) * 10 + 1
+    searchType = 'image'
+    city_url = f"https://www.googleapis.com/customsearch/v1?q={query}&cx={cse_id}&key={api_key}&start={start}&searchType={searchType}"
+    city_data = requests.get(city_url).json()
+    search_items = city_data.get("items")
+    image_url = search_items[2]['link']
+    
+    print(image_url)
+    
+    # weather -----
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=91a016a5ded7f0fd7f29ebb4d50c8090'
     
     PARAMS = {'units': 'metric'}  
@@ -28,7 +43,8 @@ def home(request):
             'icon': icon,
             'temp': temp,
             'day': day,
-            'city': city
+            'city': city, 
+            'image':image_url,
         }
     else:
         context = {'error': 'City not found. Please try again.'}
