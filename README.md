@@ -26,3 +26,9 @@ Contributions are welcome! Please follow these steps to contribute:
 5. Create a new Pull Request
 
 Enjoy!
+
+## Acknowledgement
+
+https://openweather.co.uk for the API
+Django web framework
+bootstrap
